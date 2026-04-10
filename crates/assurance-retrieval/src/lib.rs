@@ -203,10 +203,7 @@ mod tests {
     async fn attestation_roundtrip_verifies() {
         init_tracing();
         let mut r = AttestingRetriever::new(idx());
-        r.insert(
-            "doc1",
-            "Morty is an NMLS-registered wholesale broker",
-        );
+        r.insert("doc1", "Morty is an NMLS-registered wholesale broker");
         let q = Query {
             text: "morty".into(),
             entity: None,
