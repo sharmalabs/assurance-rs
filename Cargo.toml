@@ -1,0 +1,34 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/assurance-core",
+    "crates/assurance-entity",
+    "crates/assurance-retrieval",
+    "crates/assurance-policy",
+    "crates/assurance-eval",
+    "crates/assurance-backends",
+    "crates/assurance-server",
+]
+
+[workspace.package]
+version      = "0.1.0"
+edition      = "2021"
+rust-version = "1.75"
+license      = "Apache-2.0"
+authors      = ["Shantanu Sharma <shantanusharma@users.noreply.github.com>"]
+repository   = "https://github.com/sharmalabs/assurance-rs"
+description  = "Point-in-time factuality assurance for long-tail entities in generative AI."
+
+[workspace.dependencies]
+anyhow         = "1"
+thiserror      = "1"
+async-trait    = "0.1"
+serde          = { version = "1", features = ["derive"] }
+serde_json     = "1"
+tokio          = { version = "1", features = ["full"] }
+tracing        = "0.1"
+chrono         = { version = "0.4", features = ["serde"] }
+blake3         = "=1.5.4"
+ed25519-dalek  = { version = "=2.1.1", features = ["rand_core"] }
+rand                = "0.8"
+tracing-subscriber  = { version = "0.3", features = ["fmt", "env-filter"] }

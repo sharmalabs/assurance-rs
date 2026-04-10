@@ -1,0 +1,30 @@
+[package]
+name        = "assurance-server"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "HTTP and MCP surface for the assurance-rs stack."
+
+[[bin]]
+name = "assurance-server"
+path = "src/main.rs"
+
+[[example]]
+name = "morty_mortgage_demo"
+path = "examples/morty_mortgage_demo.rs"
+
+[dependencies]
+assurance-core       = { path = "../assurance-core" }
+assurance-entity     = { path = "../assurance-entity" }
+assurance-retrieval  = { path = "../assurance-retrieval" }
+assurance-policy     = { path = "../assurance-policy" }
+assurance-backends   = { path = "../assurance-backends" }
+tokio                = { workspace = true }
+serde                = { workspace = true }
+serde_json           = { workspace = true }
+anyhow               = { workspace = true }
+tracing              = { workspace = true }
+chrono               = { workspace = true }
+
+[dev-dependencies]
+tracing-subscriber  = { workspace = true }

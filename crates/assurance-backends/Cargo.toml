@@ -1,0 +1,19 @@
+[package]
+name        = "assurance-backends"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Pluggable LLM backends that return provenanced outputs under policy."
+
+[dependencies]
+assurance-core = { path = "../assurance-core" }
+async-trait    = { workspace = true }
+serde          = { workspace = true }
+serde_json     = { workspace = true }
+anyhow         = { workspace = true }
+tracing        = { workspace = true }
+
+[dev-dependencies]
+chrono              = { workspace = true }
+tokio               = { workspace = true }
+tracing-subscriber  = { workspace = true }
